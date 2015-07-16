@@ -3,8 +3,9 @@ require 'rails_helper'
 describe "the add a list process" do
   it "adds a new list" do
     visit lists_path
-    click_on 'Add list'
+    click_on 'Add a List'
     fill_in 'Name', :with => 'Home stuff'
+    fill_in 'Description', :with => 'Hi Mom'
     click_on 'Create List'
     expect(page).to have_content 'Lists'
   end

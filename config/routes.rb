@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root 'lists#index'
 
   resources :lists do
-    resources :description
-    resources :tasks do
+    resources :description, :only => [:index]
+    resources :tasks, :except => [:show, :index] do
       resources :subtask
     end
   end
