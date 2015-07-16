@@ -1,6 +1,6 @@
 class DescriptionController < ApplicationController
-  def show
-    @list = List.find(params[:id])
-    render :show
+  def index
+    @list = List.find(params[:list_id])
+
   end
 end
